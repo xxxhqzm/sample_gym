@@ -125,4 +125,18 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * 202102141637 - Testing say Hi in a page using controller
+     * For example, the action ID create-comment corresponds to the action method name actionCreateComment
+     * parameter $message, whose value defaults to "Hello".
+     *
+     * action method, render() is called to render a view file named say.
+     * The message parameter is also passed to the view so that it can be used there.
+     */
+    public function actionSay($message = "BYE!") {
+        return $this->render('say', ['message' => $message]);
+    }
+
+
 }
